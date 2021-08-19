@@ -2,6 +2,8 @@
 
 绝绝子生成器，欢迎大家 Pull Requests！
 
+在线试玩：[https://kingcos.me/jjz](https://kingcos.me/jjz/index.html)
+
 - 生成算法启发自[狗屁不通文章生成器（BullshitGenerator）](https://github.com/menzi11/BullshitGenerator)；
 - 生成结构启发自：
 
