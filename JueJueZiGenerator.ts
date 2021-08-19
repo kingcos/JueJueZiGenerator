@@ -230,7 +230,8 @@ const matierailsJSON = `
         "撸 代码",
         "刷 微博",
         "买 基金",
-        "摸 鱼"
+        "摸 鱼",
+        "玩 绝绝子生成器"
     ]
 }
 `
@@ -287,8 +288,8 @@ function randomWords(words: string[], count: number): string[] {
         return words
     }
 
-   // Inspired by: https://www.imooc.com/wenda/detail/440036
-   return words.sort(() => Math.random() - 0.5).slice(0, count)
+    // Inspired by: https://www.imooc.com/wenda/detail/440036
+    return words.sort(() => Math.random() - 0.5).slice(0, count)
 }
 
 function randomRepeat(word: string, times = -1): string {
@@ -412,4 +413,24 @@ function generate(matierail: Matierail, something: string): string {
 }
 
 var matierail = parseMatieraials(matierailsJSON)
-console.log(generate(matierail, randomWord(matierail.default)))
+
+function randomSetDefaultWord() {
+    var input = <HTMLInputElement>document.getElementById('keyword_input')
+    input.value = randomWord(matierail.default)
+}
+
+function chongYa() {
+    var input = <HTMLInputElement>document.getElementById('keyword_input')
+    var content = generate(matierail, input.value)
+
+    var container = <HTMLDivElement>document.getElementById('content_container')
+    container.style.display = 'flex'
+
+    if (container.firstElementChild != null) {
+        container.firstElementChild.innerHTML = content
+    }
+
+}
+
+// console.log(generate(matierail, randomWord(matierail.default)))
+randomSetDefaultWord()
