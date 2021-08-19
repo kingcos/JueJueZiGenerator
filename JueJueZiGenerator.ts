@@ -36,157 +36,79 @@ const matierailsJSON = `
             "💗",
             "💖",
             "💝"
-            
         ],
         "xiaohongshu": [
-            "[微笑R]", "[害羞R]", "[失望R]", "[汗颜R]", "[哇R]", "[喝奶茶R]", "[自拍R]", "[偷笑R]", "[飞吻R]", "[石化R]", "[笑哭R]", "[赞R]", "[暗中观察R]", "[买爆R]", "[大笑R]", "[色色R]", "[生气R]", "[哭惹R]", "[萌萌哒R]", "[斜眼R]", "[可怜R]", "[鄙视R]", "[皱眉R]", "[抓狂R]", "[派对R]", "[吧唧R]", "[惊恐R]", "[抠鼻R]", "[再见R]", "[叹气R]", "[睡觉R]", "[得意R]", "[吃瓜R]", "[扶墙R]", "[黑薯问号R]", "[黄金薯R]", "[吐舌头H]", "[扯脸H]", "[doge]"
+            "[微笑R]",
+            "[害羞R]",
+            "[失望R]",
+            "[汗颜R]",
+            "[哇R]",
+            "[喝奶茶R]",
+            "[自拍R]",
+            "[偷笑R]",
+            "[飞吻R]",
+            "[石化R]",
+            "[笑哭R]",
+            "[赞R]",
+            "[暗中观察R]",
+            "[买爆R]",
+            "[大笑R]",
+            "[色色R]",
+            "[生气R]",
+            "[哭惹R]",
+            "[萌萌哒R]",
+            "[斜眼R]",
+            "[可怜R]",
+            "[鄙视R]",
+            "[皱眉R]",
+            "[抓狂R]",
+            "[派对R]",
+            "[吧唧R]",
+            "[惊恐R]",
+            "[抠鼻R]",
+            "[再见R]",
+            "[叹气R]",
+            "[睡觉R]",
+            "[得意R]",
+            "[吃瓜R]",
+            "[扶墙R]",
+            "[黑薯问号R]",
+            "[黄金薯R]",
+            "[吐舌头H]",
+            "[扯脸H]",
+            "[doge]"
         ],
-        "weibo": [
-
-        ]
+        "weibo": []
     },
     "symbols": [
-        "！", "？", "～", "❓", "❔", "‼️", "⁉️", "❗️", "❕"
+        "！",
+        "？",
+        "～",
+        "❓",
+        "❔",
+        "‼️",
+        "⁉️",
+        "❗️",
+        "❕"
     ],
     "auxiliaryWords": [
-        "鸭", "呜", "啦", "呐", "呀", "咩", "呢", "哈", "嘿", "哒", "害", "啊"
-    ],
-    "measureWords": [
-        "只",
-        "个",
-        "杯",
-        "对"
-    ],
-    "numberWords": [
-        "一",
-        "二",
-        "三"
-    ],
-    "fashion": {
-        "subject": [
-            "打工人",
-            "仙女",
-            "普信男",
-            "Java男",
-            "干饭人"
-        ],
-        "object": [
-            "小狗勾",
-            "小姐姐",
-            "集美",
-            "集美们",
-            "闺蜜",
-            "闺蜜👭",
-            "姐妹",
-            "姐妹们",
-            "姐妹👭",
-            "好姐妹",
-            "好姐妹👭",
-            "小姐妹",
-            "小姐妹👭"
-        ],
-        "predicate": {
-            "verb": [
-                "吃",
-                "喝",
-                "穿",
-                "买",
-                "吸入",
-                "编",
-                "看见",
-                "营业",
-                "逛"
-            ],
-            "noun": [
-                "小蛋糕",
-                "小布丁",
-                "奶茶",
-                "码",
-                "街",
-                "JK",
-                "迷hotel"
-            ]
-        },
-        "attribute": [
-            "绝绝子",
-            "无语子",
-            "真下头",
-            "yyds",
-            "奈斯",
-            "有被惊艳到",
-            "🉑️",
-            "太可了",
-            "太🉑️了",
-            "真的绝",
-            "太牛了",
-            "太🐮了",
-            "好dosth到跺脚",
-            "好dosth到爆",
-            "好dosth到跺jiojio",
-            "太爱了"
-        ],
-        "adverbial": {
-            "suffix":[
-                "到跺脚",
-                "到跺jiojio"
-            ],
-            "prefix":[
-                "缓缓",
-                "暴风"
-            ],
-            "time":[
-                "今日",
-                "今天",
-                "今日份"
-            ],
-            "location": [
-                "路上",
-                "奶茶店",
-                "蛋糕店"
-            ]
-        },
-        "random": [
-            "救命🆘",
-            "噎死莫拉",
-            "不管啦",
-            "就是玩儿",
-            "无语子",
-            "我真的哭死",
-            "冲鸭",
-            "笑死",
-            "那我走",
-            "我都惊了",
-            "大无语事件",
-            "就很烦",
-            "心态炸裂",
-            "搞快点",
-            "不是吧",
-            "不是8⃣️",
-            "全都给我冲",
-            "啥也不是"
-        ],
-        "suffix": [
-            "也是在逃公主的一天",
-            "好想谈一场双向奔赴的恋爱",
-            "星星月亮和我都要睡啦",
-            "散会",
-            "我是一面镜子 所以 晚安 我碎啦",
-            "岁月漫长 那就一起拯救地球与乐趣吧"
-        ],
-        "match": {
-
-        }
-    },
-    "conjunction": [
-        "跟",
-        "和"
+        "鸭",
+        "呜",
+        "啦",
+        "呐",
+        "呀",
+        "咩",
+        "呢",
+        "哈",
+        "嘿",
+        "哒",
+        "害",
+        "啊"
     ],
     "dividers": [
         " ",
         "，"
     ],
-
-
     "beginning": [
         "今日份who营业啦",
         "who下班啦",
@@ -265,7 +187,44 @@ const matierailsJSON = `
         "不小心踩了狗屎",
         "路上还看见一个Java男"
     ],
-
+    "attribute": [
+        "绝绝子",
+        "无语子",
+        "真下头",
+        "yyds",
+        "奈斯",
+        "有被惊艳到",
+        "🉑️",
+        "太可了",
+        "太🉑️了",
+        "真的绝",
+        "太牛了",
+        "太🐮了",
+        "好dosth到跺脚",
+        "好dosth到爆",
+        "好dosth到跺jiojio",
+        "太爱了"
+    ],
+    "fashion": [
+        "救命🆘",
+        "噎死莫拉",
+        "不管啦",
+        "就是玩儿",
+        "无语子",
+        "我真的哭死",
+        "冲鸭",
+        "笑死",
+        "那我走",
+        "我都惊了",
+        "大无语事件",
+        "就很烦",
+        "心态炸裂",
+        "搞快点",
+        "不是吧",
+        "不是8⃣️",
+        "全都给我冲",
+        "啥也不是"
+    ],
     "default": [
         "豁 奶茶",
         "撸 代码",
@@ -274,7 +233,6 @@ const matierailsJSON = `
         "摸 鱼"
     ]
 }
-
 `
 
 const ContentLengthConstraint = 300 // 内容长度约束
@@ -282,33 +240,16 @@ const ContentLengthConstraint = 300 // 内容长度约束
 // --- INTERFACES ---
 
 interface Matierail {
-    emotions: {
+    emotions: {               // 表情
         emoji: string[]
         xiaohongshu: string[]
         weibo: string[]
     }
     symbols: string[]
     auxiliaryWords: string[]
-    fashion: {
-        subject: string[]      // 主语
-        object: string[]       // 宾语
-        predicate: {           // 谓语
-            verb: string[]
-            noun: string[]
-        }
-        attribute: string[]    // 定语
-        adverbial: {           // 状语
-            suffix: string[]   // 后置
-            prefix: string[]   // 前置
-            time: string[]     // 时间
-            location: string[] // 地点
-        }
-        random: string[]       // 固定搭配
-        ending: string[]       // 结尾
-    }
-    conjunction: string[]      // 连词
-    dividers: string[]         // 断句符
-
+    dividers: string[]        // 断句符
+    fashion: string[]         // 潮流
+    attribute: string[]       // 定语
 
     beginning: string[]       // 开头
     ending: string[]          // 结尾
@@ -371,29 +312,6 @@ function randomRepeat(word: string, times = -1): string {
 }
 
 // --- CORE ---
-
-function whenWhoDoWhat(matierail: Matierail): string {
-    var time = randomWord(matierail.fashion.adverbial.time)
-    var subject = randomWord(matierail.fashion.subject, true)
-    if (!subject.length) {
-        var conjunction = randomWord(matierail.conjunction)
-        var object = randomWord(matierail.fashion.object)
-        subject = conjunction + object
-    }
-    var predicate = randomWord(matierail.fashion.predicate.verb) + randomWord(matierail.fashion.predicate.noun)
-    var auxiliary = randomRepeat(randomWord(matierail.auxiliaryWords))
-    var symbol = randomWord(matierail.symbols)
-
-    return time + subject + predicate + auxiliary + symbol
-}
-
-function randomFashion(matierail: Matierail, divider: string): string {
-    var result = randomWord(matierail.fashion.random, true)
-    if (result.length) {
-        result += divider
-    }
-    return result
-}
 
 function generateBeginning(matierail: Matierail, divider: string) {
     var beginning = randomWord(matierail.beginning)
@@ -476,19 +394,19 @@ function generate(matierail: Matierail, something: string): string {
 
     var divider = randomWord(matierail.dividers) // 分隔符
 
-    var fashionWords = randomWords(matierail.fashion.random, matierail.fashion.random.length) // 不重复的词组
+    var fashionWords = randomWords(matierail.fashion, matierail.fashion.length) // 不重复的词组
 
     var first = generateBeginning(matierail, divider)
     var second = fashionWords[0] + divider
     var third = generateDoSth(matierail, something, divider)
     var forth = fashionWords[1] + divider
     var fifth = randomRepeat(randomWord(matierail.auxiliaryWords), 3) + divider
-    var sixth = praiseSth(something, matierail.fashion.attribute) + randomRepeat(randomWord(matierail.symbols), 3)
-    var seventh = praiseSth(randomButNotContain(matierail.another, something), matierail.fashion.attribute, true) + randomRepeat(randomWord(matierail.symbols), 3)
+    var sixth = praiseSth(something, matierail.attribute) + randomRepeat(randomWord(matierail.symbols), 3)
+    var seventh = praiseSth(randomButNotContain(matierail.another, something), matierail.attribute, true) + randomRepeat(randomWord(matierail.symbols), 3)
     var eighth = fashionWords[2] + divider
-    var ninth = randomWord(matierail.collections, true, divider)
+    var ninth = randomWord(matierail.collections, true, divider) + fashionWords[3] + divider
     var tenth = randomRepeat(randomWord(matierail.auxiliaryWords), 3) + divider
-    var last = randomWord(matierail.ending) + randomWord(matierail.emotions.emoji, true)
+    var last = randomWord(matierail.ending) + randomWord(matierail.emotions.emoji)
 
     return first + second + third + forth + fifth + sixth + seventh + eighth + ninth + tenth + last
 }
