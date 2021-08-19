@@ -455,8 +455,8 @@ function generate(matierail: Matierail, something: string): string {
     var forth = coolWords[1] + divider
     var fifth = randomRepeat(randomWord(matierail.auxiliaryWords), 3) + divider
     var sixth = praiseSth(something, matierail.fashion.attribute) + randomRepeat(randomWord(matierail.symbols), 3)
-    // var seventh = praiseSth(something, matierail.fashion.attribute) + randomRepeat(randomWord(matierail.symbols), 3)
-    // var eighth = coolWords[2] + divider
+    var seventh = praiseSth(something, matierail.fashion.attribute) + randomRepeat(randomWord(matierail.symbols), 3)
+    var eighth = coolWords[2] + divider
 
     return first + second + third + forth + fifth + sixth + seventh + eighth
 }
