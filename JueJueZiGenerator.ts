@@ -122,7 +122,8 @@ const matierailsJSON = `
             "太🐮了",
             "好dosth到跺脚",
             "好dosth到爆",
-            "好dosth到跺jiojio"
+            "好dosth到跺jiojio",
+            "太爱了"
         ],
         "adverbial": {
             "suffix":[
@@ -170,9 +171,7 @@ const matierailsJSON = `
             "星星月亮和我都要睡啦",
             "散会",
             "我是一面镜子 所以 晚安 我碎啦",
-            "岁月漫长 那就一起拯救地球与乐趣吧",
-            "",
-            ""
+            "岁月漫长 那就一起拯救地球与乐趣吧"
         ],
         "match": {
 
@@ -206,7 +205,8 @@ const matierailsJSON = `
         "普信男",
         "Java男",
         "普信女",
-        "小可爱"
+        "小可爱",
+        "本公主"
     ],
     "someone": [
         "小狗勾",
@@ -239,8 +239,42 @@ const matierailsJSON = `
         "还是去dosth了",
         "无聊去dosth",
         "今天去体验了dosth"
+    ],
+    "another": [
+        "买 小蛋糕",
+        "买 小布丁",
+        "喝 奶茶",
+        "穿 JK",
+        "吃 迷hotel",
+        "喝 咖啡",
+        "买 蜜雪冰城",
+        "买 喜茶",
+        "喝 谬可"
+    ],
+    "ending": [
+        "也是在逃公主的一天",
+        "好想谈一场双向奔赴的恋爱",
+        "星星月亮和我都要睡啦",
+        "散会",
+        "我是一面镜子 所以 晚安 我碎啦",
+        "岁月漫长 那就一起拯救地球与乐趣吧"
+    ],
+    "collections": [
+        "路上还看见一个普信男",
+        "路边捡到了一分钱",
+        "不小心踩了狗屎",
+        "路上还看见一个Java男"
+    ],
+
+    "default": [
+        "豁 奶茶",
+        "撸 代码",
+        "刷 微博",
+        "买 基金",
+        "摸 鱼"
     ]
 }
+
 `
 
 const ContentLengthConstraint = 300 // 内容长度约束
@@ -277,10 +311,14 @@ interface Matierail {
 
 
     beginning: string[]       // 开头
+    ending: string[]          // 结尾
     who: string[]             // 主语
     someone: string[]         // 和/跟谁
 
     todosth: string[]         // 干什么
+    another: string[]         // 扯另一个淡
+    collections: string[]     // 一些固定搭配
+    default: string[]         // 默认 something
 }
 
 // --- UTILITIES ---
@@ -289,7 +327,7 @@ function parseMatieraials(matierailsJSON: string): Matierail {
     return JSON.parse(matierailsJSON)
 }
 
-function randomWord(words: string[], nullable = false): string {
+function randomWord(words: string[], nullable = false, divider = ''): string {
     var maxRange = words.length
     if (nullable) {
         // 增加 1/3 概率
@@ -299,25 +337,17 @@ function randomWord(words: string[], nullable = false): string {
     if (index >= words.length) {
         return ''
     } else {
-        return words[index]
+        return words[index] + divider
     }
 }
 
 function randomWords(words: string[], count: number): string[] {
-    var indexArray = []
-    for (let index = 0; index < count; index++) {
-        indexArray[index] = index + 1
-    }
-    indexArray.sort(() => {
-        return 0.5 - Math.random()
-    })
-
-    var resultArray = []
-    for (let index = 0; index < indexArray.length; index++) {
-        resultArray.push(words[index])
+    if (words.length < count) {
+        return words
     }
 
-    return resultArray
+   // Inspired by: https://www.imooc.com/wenda/detail/440036
+   return words.sort(() => Math.random() - 0.5).slice(0, count)
 }
 
 function randomRepeat(word: string, times = -1): string {
@@ -374,7 +404,7 @@ function generateBeginning(matierail: Matierail, divider: string) {
     }
     if (beginning.indexOf('someone') != -1) {
         // 拼 someone
-        beginning = beginning.replace('someone', randomWord(['和', '跟']) + randomWord(matierail.someone))
+        beginning = beginning.replace('someone', randomWord(matierail.someone))
     }
 
     var emotion = randomWord(matierail.emotions.emoji, true)
@@ -406,7 +436,7 @@ function generateDoSth(matierail: Matierail, something: string, divider: string)
     return todosth + emotions + divider
 }
 
-function praiseSth(something: string, praisedWords: string[]): string {
+function praiseSth(something: string, praisedWords: string[], hasAlso = false): string {
     var praiseWord = randomWord(praisedWords)
 
     var verb = something.split(' ')[0]
@@ -415,17 +445,30 @@ function praiseSth(something: string, praisedWords: string[]): string {
     var result = ''
 
     var intro = randomWord(['这家的', '这家店的', '这个', '这件', '这杯'])
+    var also = hasAlso ? '也' : ''
 
     if (praiseWord.indexOf('dosth') != -1) {
         // eg. 好dosth到爆
         praiseWord = praiseWord.replace('dosth', verb)
-        result = intro + noun + praiseWord
+        result = intro + noun + also + praiseWord
     } else {
         // eg. 绝绝子
-        result = intro + noun + praiseWord
+        result = intro + noun + also + praiseWord
     }
 
     return result
+}
+
+function randomButNotContain(words: string[], already: string): string {
+    var random = randomWord(words)
+    // Inspired by: https://www.cnblogs.com/mengff/p/7350005.html
+    var set = new Set(already.replace(' ', '').split(''))
+    var intersect = new Set(random.replace(' ', '').split('').filter(x => set.has(x)))
+    if (Array.from(intersect).length == 0) {
+        return random
+    } else {
+        return randomButNotContain(words, already)
+    }
 }
 
 function generate(matierail: Matierail, something: string): string {
@@ -433,33 +476,22 @@ function generate(matierail: Matierail, something: string): string {
 
     var divider = randomWord(matierail.dividers) // 分隔符
 
-    // var first = whenWhoDoWhat(matierail)           // 今日份+仙女+营业+啦+,
-    // var second = randomFashion(matierail, divider) // 无语子+,
-    // var third = whenWhoDoWhat(matierail)           // 今天+去买+奶茶+鸭+,
-    // var forth = randomFashion(matierail, divider)  // 救命🆘
-
-    // // var fifth = randomRepeat(randomWord(matierail.auxiliaryWords), 3) + divider
-    // // var sixth = fashion(matierail, divider)
-    // // var seventh = randomRepeat(randomWord(matierail.auxiliaryWords), 3) + divider
-
-
-
-
-    // return first + second + third + forth // + fifth + sixth + seventh
-
-    var coolWords = randomWords(matierail.fashion.random, 5)
+    var fashionWords = randomWords(matierail.fashion.random, matierail.fashion.random.length) // 不重复的词组
 
     var first = generateBeginning(matierail, divider)
-    var second =coolWords[0] + divider
+    var second = fashionWords[0] + divider
     var third = generateDoSth(matierail, something, divider)
-    var forth = coolWords[1] + divider
+    var forth = fashionWords[1] + divider
     var fifth = randomRepeat(randomWord(matierail.auxiliaryWords), 3) + divider
     var sixth = praiseSth(something, matierail.fashion.attribute) + randomRepeat(randomWord(matierail.symbols), 3)
-    var seventh = praiseSth(something, matierail.fashion.attribute) + randomRepeat(randomWord(matierail.symbols), 3)
-    var eighth = coolWords[2] + divider
+    var seventh = praiseSth(randomButNotContain(matierail.another, something), matierail.fashion.attribute, true) + randomRepeat(randomWord(matierail.symbols), 3)
+    var eighth = fashionWords[2] + divider
+    var ninth = randomWord(matierail.collections, true, divider)
+    var tenth = randomRepeat(randomWord(matierail.auxiliaryWords), 3) + divider
+    var last = randomWord(matierail.ending) + randomWord(matierail.emotions.emoji, true)
 
-    return first + second + third + forth + fifth + sixth + seventh + eighth
+    return first + second + third + forth + fifth + sixth + seventh + eighth + ninth + tenth + last
 }
 
 var matierail = parseMatieraials(matierailsJSON)
-console.log(generate(matierail, "豁 奶茶"))
+console.log(generate(matierail, randomWord(matierail.default)))
