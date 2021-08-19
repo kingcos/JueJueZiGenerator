@@ -1,8 +1,6 @@
 # JueJueZiGenerator
 
-绝绝子生成器，欢迎大家 Pull Requests！
-
-在线试玩：[https://kingcos.me/jjz](https://kingcos.me/jjz/index.html)
+绝绝子生成器，欢迎大家 Pull Requests！在线试玩 => [https://kingcos.me/jjz](https://kingcos.me/jjz/index.html)
 
 ⚠️：
 
