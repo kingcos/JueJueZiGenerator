@@ -1,0 +1,127 @@
+body {
+  font-family: "Hiragino Sans GB", "SFMono", "Lato", "-apple-system";
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+input {
+  border-bottom: 1px solid #000;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  height: 30px;
+  font-size: 28px;
+  margin-right: 10px;
+  max-width: 80%;
+}
+
+button {
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #73ad21;
+  color: cornsilk;
+  border-radius: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  font-weight: 900;
+  padding: 5px;
+}
+
+blockquote {
+  border-radius: 20px;
+  background-color: rgba(145, 199, 60, 0.54);
+  padding: 10px;
+  width: 90%;
+}
+
+.main_body {
+  margin-top: 20px;
+  border-radius: 25px;
+  border: 2px solid #73ad21;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jjz {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.operation_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+}
+
+.submit_button {
+  min-width: 50px;
+  width: 100px;
+  font-size: medium;
+}
+
+.copy_button {
+  height: 40px;
+  margin-top: 10px;
+  font-size: medium;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+}
+
+.left-footer {
+  border-radius: 25px;
+  border: 2px solid #6e817d;
+  padding: 20px;
+  min-width: 30%;
+  margin-right: 10px;
+  flex: 1;
+  margin-top: 10px;
+  margin-left: 10px;
+  word-wrap: break-word;
+}
+
+.right-footer {
+  border-radius: 25px;
+  border: 2px solid #81caa1;
+  padding: 20px;
+  min-width: 30%;
+  flex: 1;
+  margin-top: 10px;
+  margin-right: 10px;
+  word-wrap: break-word;
+}
+
+#content_container {
+  border-radius: 25px;
+  background-color: rgba(145, 199, 60, 0.84);
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* unselectable: all; */
+/* onselectstart: all; */
+/* #generate_content {
+  -moz-user-select: all;
+  -webkit-user-select: all;
+  -webkit-touch-callout: all;
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+} */
