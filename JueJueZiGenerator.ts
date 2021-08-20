@@ -358,8 +358,8 @@ function generateDoSth(matierail: Matierail, something: string, divider: string)
 function praiseSth(something: string, praisedWords: string[], hasAlso = false): string {
     var praiseWord = randomWord(praisedWords)
 
-    var verb = something.split(' ')[0]
-    var noun = something.split(' ')[1]
+    var verb = something.split(' ')[0] || ''
+    var noun = something.split(' ')[1] || ''
 
     var result = ''
 
