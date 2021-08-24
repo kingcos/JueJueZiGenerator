@@ -3,7 +3,7 @@
 绝绝子生成器，欢迎大家 Pull Requests！在线试玩 => [https://kingcos.me/jjz](https://kingcos.me/jjz/index.html)
 
 - 怎么玩？欢迎来 B 站观看：[绝绝子生成器卑微作者亲自解说怎么玩儿](https://www.bilibili.com/video/BV14b4y1S71k)；
-- 关于它背后的故事感兴趣，欢迎来阅读：[绝绝子生成器的从 0 到 30 万](https://mp.weixin.qq.com/s/LoIWTO_rRwRv7bMn_jOhzw)。 
+- 对它背后的故事感兴趣？欢迎来阅读：[绝绝子生成器的从 0 到 30 万](https://mp.weixin.qq.com/s/LoIWTO_rRwRv7bMn_jOhzw)。 
 
 ⚠️：
 
