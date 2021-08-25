@@ -296,8 +296,8 @@
     function praiseSth(something, praisedWords, hasAlso) {
         if (hasAlso === void 0) { hasAlso = false; }
         var praiseWord = randomWord(praisedWords);
-        var verb = something.split(' ')[0];
-        var noun = something.split(' ')[1];
+        var verb = something.split(' ')[0] || '';
+        var noun = something.split(' ')[1] || '';
         var result = '';
         var intro = randomWord(['这家的', '这家店的', '这个', '这件', '这杯']);
         var also = hasAlso ? '也' : '';
